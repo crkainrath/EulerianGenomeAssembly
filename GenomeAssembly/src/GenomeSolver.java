@@ -46,7 +46,7 @@ public class GenomeSolver {
             degreeOut.get(front).increment();
             degreeIn.get(back).increment();
         }
-        System.out.println(nodeMap);
+        // System.out.println(nodeMap);
     }
 
     public String solve(){
@@ -103,16 +103,16 @@ public class GenomeSolver {
                 } else if ((out + 1) == in && !foundStart){
                     foundStart = true;
                 } else {
-                    System.out.println("Found imbalanced node");
+                    // System.out.println("Found imbalanced node");
                     return false;
                 }
             }
         }
         if (foundStart && foundEnd){
-            System.out.println("Can solve");
+            // System.out.println("Can solve");
             return true;
         }
-        System.out.println("Couldn't find start and end");
+        // System.out.println("Couldn't find start and end");
         return false;
     }
 
