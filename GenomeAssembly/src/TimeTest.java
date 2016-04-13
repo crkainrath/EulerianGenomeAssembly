@@ -21,7 +21,7 @@ public class TimeTest {
             String[] lmers = RandomGenerator.breakString(i, sequence);
             
             start = System.nanoTime();
-            GenomeSolver solver = new GenomeSolver(lmers);
+            GenomeSolver solver = new GenomeSolver(lmers, i);
             String solution = solver.solve();
 
             if (solution == null) { // Could not solve

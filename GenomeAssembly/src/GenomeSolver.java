@@ -14,13 +14,12 @@ public class GenomeSolver {
     private List<String> allNodes;
     private String[] lmers;
 
-    public GenomeSolver(String[] lmers){
+    public GenomeSolver(String[] lmers, int len){
         this.lmers = lmers;
         nodeMap = new HashMap<String, List<String>>();
         degreeIn = new HashMap<String, Counter>();
         degreeOut = new HashMap<String, Counter>();
         allNodes = new LinkedList<String>();
-        int len = lmers[0].length();
         for (int i = 0; i < lmers.length; i ++){
             String front = lmers[i].substring(0, len - 1);
             String back = lmers[i].substring(1);
